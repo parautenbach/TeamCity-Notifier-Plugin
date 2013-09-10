@@ -4,16 +4,17 @@ TeamCity-Notifier-Plugin
 A TeamCity plugin to send notifications to a notification server which can broadcast events to registered clients.
 
 Help:
- o http://www.jetbrains.net/confluence/display/TCD4/Custom+Notifier
- o http://javadoc.jetbrains.net/teamcity/openapi/current/
+* http://www.jetbrains.net/confluence/display/TCD4/Custom+Notifier
+* http://javadoc.jetbrains.net/teamcity/openapi/current/
+
 Installation:
- o Compile lights-notifier.jar (ant clean release)
- o Copy JAR to C:\TeamCity\webapps\ROOT\WEB-INF\lib
- o Copy build-server-plugin-lights-notifier.xml to C:\TeamCity\webapps\ROOT\WEB-INF
- o Check permissions of both the JAR and XML above to be the same
-   than what the other files in those directories are
- o Add the following two sections to <TEAMCITY_HOME>/conf/teamcity-server-log4j.xml
-======================================================================
+# Compile lights-notifier.jar (ant clean release)
+# Copy JAR to C:\TeamCity\webapps\ROOT\WEB-INF\lib
+# Copy build-server-plugin-lights-notifier.xml to C:\TeamCity\webapps\ROOT\WEB-INF
+# Check permissions of both the JAR and XML above to be the same than what the other files in those directories are
+# Add the following two sections to <TEAMCITY_HOME>/conf/teamcity-server-log4j.xml
+
+```xml
 <appender name="ROLL.LIGHTS.NOTIFIER" class="jetbrains.buildServer.util.TCRollingFileAppender">
  <param name="file" value="${teamcity_logs}lights-notifier.log"/>
  <param name="maxBackupIndex" value="3"/>
@@ -30,7 +31,7 @@ Installation:
  <priority value="INFO"/>
  <appender-ref ref="ROLL.LIGHTS.NOTIFIER"/>
 </category>
-======================================================================
- o Restart TeamCity service
- o Set up or use a TeamCity account (typically an admin account) and  
-   ensure that that account will receive all server notifications
+```
+
+# Restart TeamCity service
+# Set up or use a TeamCity account (typically an admin account) and ensure that that account will receive all server notifications
