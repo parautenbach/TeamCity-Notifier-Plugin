@@ -3,10 +3,6 @@ TeamCity-Notifier-Plugin
 
 A TeamCity plugin to send notifications to a notification server which can broadcast events to registered clients.
 
-# Help
-* [TeamCity Custom Notifier](http://www.jetbrains.net/confluence/display/TCD4/Custom+Notifier)
-* [TeamCity Open API](http://javadoc.jetbrains.net/teamcity/openapi/current/)
-
 # Installation
 * Compile `lights-notifier.jar` (ant clean release)
 * Copy JAR to `<TEAMCITY_HOME>/webapps/ROOT/WEB-INF/lib`
@@ -35,3 +31,7 @@ A TeamCity plugin to send notifications to a notification server which can broad
 
 * Restart TeamCity service
 * Set up or use a TeamCity account (typically an admin account) and ensure that that account will receive all server notifications
+
+# Help
+* [TeamCity Custom Notifier](http://www.jetbrains.net/confluence/display/TCD4/Custom+Notifier)
+* [TeamCity Open API](http://javadoc.jetbrains.net/teamcity/openapi/current/)
