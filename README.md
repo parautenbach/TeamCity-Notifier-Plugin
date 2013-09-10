@@ -8,11 +8,11 @@ A TeamCity plugin to send notifications to a notification server which can broad
 * [TeamCity Open API](http://javadoc.jetbrains.net/teamcity/openapi/current/)
 
 # Installation
-* Compile lights-notifier.jar (ant clean release)
-* Copy JAR to <TEAMCITY_HOME>/webapps/ROOT/WEB-INF/lib
-* Copy build-server-plugin-lights-notifier.xml to <TEAMCITY_HOME>/webapps/ROOT/WEB-INF
+* Compile `lights-notifier.jar` (ant clean release)
+* Copy JAR to `<TEAMCITY_HOME>/webapps/ROOT/WEB-INF/lib`
+* Copy `build-server-plugin-lights-notifier.xml` to `<TEAMCITY_HOME>/webapps/ROOT/WEB-INF`
 * Check permissions of both the JAR and XML above to be the same than what the other files in those directories are
-* Add the following two sections to <TEAMCITY_HOME>/conf/teamcity-server-log4j.xml
+* Add the following two sections to `<TEAMCITY_HOME>/conf/teamcity-server-log4j.xml`
 
 ```xml
 <appender name="ROLL.LIGHTS.NOTIFIER" class="jetbrains.buildServer.util.TCRollingFileAppender">
